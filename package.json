@@ -1,11 +1,11 @@
 {
-	"name": "yolk-app-token",
+	"name": "ynn-ms-token",
 	"description": "",
-	"repository": "https://github.com/LvChengbin/yolk-app-token.git",
+	"repository": "https://github.com/ynnjs/ynn-ms-token.git",
 	"version": "0.0.0",
 	"keywords": [
 		"koa",
-		"yolk",
+		"ynn",
 		"jwt",
 		"token",
 		"vcode",
@@ -16,7 +16,7 @@
 	],
 	"main": "src/index.js",
 	"bin": {
-		"yolk-app-token": "src/index.js"
+		"ynn-ms-token": "src/index.js"
 	},
 	"devDependencies": {
 		"@lvchengbin/sequence": "^1.1.8",
@@ -28,11 +28,11 @@
 	"license": "MIT",
 	"dependencies": {
 		"@lvchengbin/is": "0.0.18",
-		"@lvchengbin/yolk": "^0.1.7",
 		"ioredis": "^4.0.0",
 		"jsonwebtoken": "^8.3.0",
 		"randomstring": "^1.1.5",
-		"yargs": "^12.0.1"
+		"yargs": "^12.0.1",
+		"ynn": "0.0.0"
 	},
 	"scripts": {
 		"demo": "nodemon test/server.js",

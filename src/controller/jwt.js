@@ -26,8 +26,7 @@ const contractions = {
     jti : 'jwtid'
 };
 
-
-module.exports = class extends require( '@lvchengbin/yolk' ).Controller {
+module.exports = class extends require( 'ynn' ).Controller {
 
     /**
      * to generate a JWT with an object as payload and options.

@@ -1,6 +1,6 @@
 const request = require( 'supertest' );
 const sleep = require( '@lvchengbin/sleep' );
-const Console = require( '@lvchengbin/yolk' ).Console;
+const Console = require( 'ynn' ).Console;
 const app = require( '../src' );
 
 app.debugging = Console.WARN | Console.ERROR;

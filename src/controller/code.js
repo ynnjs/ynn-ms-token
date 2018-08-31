@@ -1,7 +1,7 @@
 const rs = require( 'randomstring' );
-const Yolk = require( '@lvchengbin/yolk' );
+const Ynn = require( 'ynn' );
 
-module.exports = class extends Yolk.Controller {
+module.exports = class extends Ynn.Controller {
     /**
      * to generate a code
      * @get {string} [charset=hex] - define the character for the code. supporting: alphabetic, alphanumeric, numeric, hex

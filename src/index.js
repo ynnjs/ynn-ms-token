@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const argv = require( 'yargs' ).argv;
-const Yolk = require( '@lvchengbin/yolk' );
-const app = new Yolk( {
+const Ynn = require( 'ynn' );
+const app = new Ynn( {
     root : __dirname,
     logDir : argv.logDir
 } );
