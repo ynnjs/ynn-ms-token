@@ -1,3 +1,3 @@
 module.exports = {
-    redis : './plugin/redis.js'
+    redis : 'ynn-plugin-redis'
 };
