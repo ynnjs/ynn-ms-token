@@ -1,0 +1,36 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "globals" : {
+        "define" : true,
+        "describe" : true,
+        "xdescribe" : true,
+        "it" : true,
+        "xit" : true,
+        "afterAll" : true,
+        "beforeAll" : true,
+        "beforeEach" : true,
+        "afterEach" : true,
+        "expect" : true,
+        "J" : true,
+        "Jaunty" : true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion" : 2017
+    },
+    "rules": {
+        "no-console" : 0,
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [ "error", "single" ],
+        "semi": [ 0 ]
+        //"indent": [2, 4, {"SwitchCase": 1}]
+    }
+}
