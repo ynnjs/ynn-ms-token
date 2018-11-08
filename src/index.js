@@ -1,14 +1,9 @@
 #!/usr/bin/env node
 
-const argv = require( 'yargs' ).argv;
 const Ynn = require( 'ynn' );
 const app = new Ynn( {
-    root : __dirname,
-    logDir : argv.logDir
+    root : __dirname
 } );
 
-if( require.main === module ) {
-    app.listen( argv.port );
-}
-
+module.parent || app.listen( Ynn.cargs.port );
 module.exports = app;

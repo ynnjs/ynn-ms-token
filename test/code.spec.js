@@ -1,13 +1,16 @@
 const request = require( 'supertest' );
+const Ynn = require( 'ynn' );
 const sleep = require( '@lvchengbin/sleep' );
-const Console = require( 'ynn' ).Console;
 const app = require( '../src' );
 
-app.debugging = Console.WARN | Console.ERROR;
+app.debugging = Ynn.DEBUGGING_WARN | Ynn.DEBUGGING_ERROR;
 
 let id = +new Date;
 
 describe( 'generating', () => {
+
+    beforeAll( () => app.ready() );
+
     it( 'should have gotten a 400 error', done => {
         request( app.listen() ).get( '/code' )
             .expect( 400 )

@@ -1,0 +1,23 @@
+sudo: false
+os:
+    - linux
+    - osx
+    - windows
+language: node_js
+node_js:
+    - 8
+    - 9
+    - 10
+    - 11
+cache:
+    directories:
+        - node_modules
+        - "$HOME/.npm"
+
+script:
+    - npm run lint
+    - npm run test-cov
+
+after_script:
+    - npm install codecov
+    - ./node_modules/.bin/codecov

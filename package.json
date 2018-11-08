@@ -8,7 +8,6 @@
 		"ynn",
 		"jwt",
 		"token",
-		"vcode",
 		"code"
 	],
 	"files": [
@@ -21,31 +20,39 @@
 	"devDependencies": {
 		"@lvchengbin/sequence": "^1.1.8",
 		"@lvchengbin/sleep": "0.0.2",
-		"jasmine": "^3.2.0",
-		"nodemon": "^1.18.4",
+		"jest": "^23.6.0",
+		"nodemon": "^1.18.6",
+		"pre-commit": "^1.2.2",
 		"supertest": "^3.1.0"
 	},
 	"license": "MIT",
 	"dependencies": {
-		"@lvchengbin/is": "0.0.18",
-		"ioredis": "^4.0.0",
+		"@lvchengbin/is": "0.0.24",
 		"jsonwebtoken": "^8.3.0",
 		"randomstring": "^1.1.5",
-		"yargs": "^12.0.1",
-		"ynn": "0.0.4",
+		"ynn": "0.0.12",
 		"ynn-plugin-redis": "git+https://github.com/ynnjs/ynn-plugin-redis.git"
 	},
 	"scripts": {
-		"demo": "nodemon test/server.js",
-		"debug": "nodemon test/server.js --debugging=true --port=50009",
-		"test-watch": "nodemon --exec npm test",
-		"test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
-		"t": "jasmine ",
-		"tw": "nodemon --exec jasmine ",
-		"test-id": "jasmine test/id.spec.js",
-		"test-jwt": "jasmine test/jwt.spec.js",
-		"test-code": "jasmine test/code.spec.js",
-		"lint": "eslint ./ --cache --ignore-path .eslintignore",
+		"start": "nodemon src",
+		"debug": "nodemon src --debugging=true",
+		"test": "jest --forceExit",
+		"test-watch": "jest --watch",
+		"test-cov": "jest --coverage --runInBand --forceExit --detectOpenHandles",
+		"lint": "eslint src --cache --ignore-path .eslintignore",
 		"precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+	},
+	"jest": {
+		"testMatch": [
+			"**/test/**/*.spec.js"
+		],
+		"coverageReporters": [
+			"text",
+			"lcov"
+		],
+		"collectCoverageFrom": [
+			"src/**/*.js"
+		],
+		"testEnvironment": "node"
 	}
 }

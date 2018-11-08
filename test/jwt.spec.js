@@ -1,9 +1,15 @@
 const Sequence = require( '@lvchengbin/sequence' );
+const Ynn = require( 'ynn' );
 const app = require( '../src' );
 const request = require( 'supertest' );
 const jwt = require( 'jsonwebtoken' );
 
+app.debugging = Ynn.DEBUGGING_WARN | Ynn.DEBUGGING_ERROR;
+
 describe( 'JWT', () => {
+
+    beforeAll( () => app.ready() );
+
     describe( 'sign', () => {
         it( 'should have gotten a 400', done => {
             request( app.listen() ).get( '/jwt?payload={}' )
@@ -108,7 +114,6 @@ describe( 'JWT', () => {
 
         it( 'invalid token', done => {
             const listen = app.listen();
-
             Sequence.all( [
                 () => request( listen ).get( '/jwt?payload={"a":1}&secret=secret' ),
                 res => request( listen ).get( `/jwt/verify?token=${res.value.body.token}xx&secret=secret` ),
