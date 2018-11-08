@@ -17,9 +17,6 @@ cache:
 service:
     - redis-server
 
-before_script:
-    - sudo redis-server /etc/redis/redis.conf --port 6379 --requirepass 'LahmYyc'
-
 script:
     - npm run lint
     - npm run test-cov
