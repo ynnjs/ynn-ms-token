@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 os:
     - linux
     - osx
@@ -13,6 +13,12 @@ cache:
     directories:
         - node_modules
         - "$HOME/.npm"
+
+service:
+    - redis-server
+
+before_script:
+    - sudo redis-server /etc/redis/redis.conf --port 6379 --requirepass 'LahmYyc'
 
 script:
     - npm run lint
