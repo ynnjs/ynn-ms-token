@@ -1,8 +1,6 @@
 sudo: true
 os:
     - linux
-    - osx
-    - windows
 language: node_js
 node_js:
     - 8
@@ -20,6 +18,9 @@ service:
 script:
     - npm run lint
     - npm run test-cov
+
+before_scripe:
+    - sudo redis-server /etc/redis/redis.conf --port 6379
 
 after_script:
     - npm install codecov
