@@ -29,7 +29,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"@lvchengbin/is": "0.0.24",
-		"jsonwebtoken": "^8.3.0",
+		"jsonwebtoken": "^8.4.0",
 		"randomstring": "^1.1.5",
 		"ynn": "0.0.12",
 		"ynn-plugin-redis": "git+https://github.com/ynnjs/ynn-plugin-redis.git"
