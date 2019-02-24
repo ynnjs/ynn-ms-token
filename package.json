@@ -18,20 +18,20 @@
 		"ynn-ms-token": "src/index.js"
 	},
 	"devDependencies": {
-		"@lvchengbin/sequence": "^1.1.8",
+		"@lvchengbin/sequence": "^2.0.1",
 		"@lvchengbin/sleep": "0.0.2",
-		"eslint": "^5.8.0",
-		"jest": "^23.6.0",
-		"nodemon": "^1.18.6",
+		"eslint": "^5.14.1",
+		"jest": "^24.1.0",
+		"nodemon": "^1.18.10",
 		"pre-commit": "^1.2.2",
-		"supertest": "^3.1.0"
+		"supertest": "^3.4.2"
 	},
 	"license": "MIT",
 	"dependencies": {
-		"@lvchengbin/is": "0.0.24",
-		"jsonwebtoken": "^8.3.0",
+		"@lvchengbin/is": "0.0.27",
+		"jsonwebtoken": "^8.5.0",
 		"randomstring": "^1.1.5",
-		"ynn": "0.0.18",
+		"ynn": "0.0.36",
 		"ynn-plugin-redis": "git+https://github.com/ynnjs/ynn-plugin-redis.git"
 	},
 	"scripts": {
